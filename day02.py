@@ -27,11 +27,18 @@ def is_prime(num) -> bool:
     return True
 
 
-# main
-help(is_prime)
-n = int(input("Input number : "))
+def print_prime_between(a, b):
+    if a > b:
+        a, b = b, a
+    num = a
+    while num <= b:
+        if is_prime(num):
+            print(num, end=" ")
+        num += 1
 
-if is_prime(n):  # function call
-    print(f"{n} is prime number!")
-else:
-    print(f"{n} is NOT prime number!")
+
+# main
+begin = int(input("input begin int: "))
+end = int(input("input end int: "))
+
+print_prime_between(begin, end)
