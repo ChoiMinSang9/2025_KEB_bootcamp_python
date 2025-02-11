@@ -1,7 +1,24 @@
 # v1.0) for -> while
 # v1.1) while 구문으로 구간 소수를 출력하는 프로그램을 작성
 # v1.2) **대신 pow 함수
+# v1.3) **연산자, pow 함수를 사용하지 않고 커스텀 함수를 만들어 동작 my_pow
+
 import math
+
+
+# assume exp is positive integer
+def my_pow(base, exp) -> float:
+    """
+    밑과 지수를 입력받아 거듭제곱 함수를 만듦
+    :param base: base number
+    :param exp: exponent
+    :return: the power result in the form
+    """
+    result = 1
+    for k in range(exp):
+        result = result * base
+
+    return result
 
 
 def is_prime(num) -> bool:
@@ -14,15 +31,12 @@ def is_prime(num) -> bool:
     """
     if num >= 2:
         i = 2
-        # for i in range(2, int(num ** 0.5) + 1):
-        while i <= int(math.pow(num, 0.5)) + 1:
+        while i * i < num:
             if num % i == 0:
                 return False
 
             i += 1
-            # is_prime = False  # count = count + 1
-            # break
-            # print(i, end=' ')
+
     else:
         return False
 
