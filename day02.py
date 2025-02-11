@@ -1,6 +1,8 @@
 # v1.0) for -> while
 # v1.1) while 구문으로 구간 소수를 출력하는 프로그램을 작성
 # v1.2) **대신 pow 함수
+import math
+
 
 def is_prime(num) -> bool:
     """
@@ -13,7 +15,7 @@ def is_prime(num) -> bool:
     if num >= 2:
         i = 2
         # for i in range(2, int(num ** 0.5) + 1):
-        while i <= int(num ** 0.5) + 1:
+        while i <= int(math.pow(num, 0.5)) + 1:
             if num % i == 0:
                 return False
 
