@@ -1,5 +1,6 @@
 # Assignment
 # while 안 쪽의 조건문을 줄이시오
+# commit 수정
 import random
 
 drinks = ["위스키", "와인", "소주", "고량주"]
