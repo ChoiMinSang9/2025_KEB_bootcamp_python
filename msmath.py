@@ -10,16 +10,16 @@ def my_abs(n) -> int:
 
 
 def fibonacci_loop(n) -> int:
-   """
-   Calculate fibonacci number
-   :param n:
-   :return: result of value fibonacci
-   """
-   n_list = [0, 1]
-   for i in range(n + 1):
-       n_list.append(n_list[i] + n_list[i + 1])
+    """
+    Calculate fibonacci number
+    :param n:
+    :return: result of value fibonacci
+    """
+    n_list = [0, 1]
+    for i in range(n + 1):
+        n_list.append(n_list[i] + n_list[i + 1])
 
-   return n_list[n]
+    return n_list[n]
 
 
 def fibonacci_recursion(n) -> int:
@@ -33,4 +33,8 @@ def fibonacci_recursion(n) -> int:
     elif n == 1:
         return 1
     else:
-        return fibonacci_recursion(n-2) + fibonacci_recursion(n-1)
+        return fibonacci_recursion(n - 2) + fibonacci_recursion(n - 1)
+
+
+if __name__ != "__main__":
+    print("msmath.py 파일을 실행하셨습니다")
