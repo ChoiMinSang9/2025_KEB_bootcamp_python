@@ -1,5 +1,5 @@
-import msmath
+import msmath as ms
 
 if __name__ == "__main__":
-    print(msmath.my_abs(-99))
-    print(msmath.fibonacci_loop(6))
+    print(ms.my_abs(-99))
+    print(ms.fibonacci_loop(6))
